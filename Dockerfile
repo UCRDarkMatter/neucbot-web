@@ -44,7 +44,7 @@ COPY --from=neucbot /neucbot/Data/ ./Data
 COPY --from=neucbot /neucbot/Materials/ ./Materials
 
 # Download TALYS-slim data
-RUN wget https://github.com/mpiercy827/talys_slim/archive/refs/tags/v${SLIM_TALYS_VERSION}.tar.gz
+RUN wget https://github.com/neucbot-datasets/talys_slim/archive/refs/tags/v${SLIM_TALYS_VERSION}.tar.gz
 RUN tar -xvzf v${SLIM_TALYS_VERSION}.tar.gz
 RUN mv talys_slim-${SLIM_TALYS_VERSION}/TalysSlim ./Data/
 RUN rm -rf v${SLIM_TALYS_VERSION}.tar.gz talys_slim-${TALYS_VERSION}/
